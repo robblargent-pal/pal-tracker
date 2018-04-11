@@ -82,7 +82,6 @@ jobs:
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Hello from the review environment"
-#        SPRING_DATASOURCE_URL: mysql://KGpq7rXWXQKUbFVa:RSUBJNQtbyX9NIOq@192.168.16.98:3306/cf_591021e3_6d2c_4853_b084_c870a5fac218?reconnect=true
 
 - name: deploy-production
   plan:
@@ -108,5 +107,4 @@ jobs:
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Hello from the production environment"
-#        SPRING_DATASOURCE_URL: mysql://GoRbwcmjHayADi3A:2CHrS4XxOsSgbUDh@192.168.16.98:3306/cf_5001e7c2_0349_4ab5_848f_7d544c9f24c0?reconnect=true
 
