@@ -29,7 +29,7 @@ public class JdbcTimeEntryRepositoryTest {
         subject = new JdbcTimeEntryRepository(dataSource);
 
         jdbcTemplate = new JdbcTemplate(dataSource);
-        jdbcTemplate.execute("DELETE FROM time_entries");
+        jdbcTemplate.execute("TRUNCATE time_entries");
 
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
     }
@@ -146,6 +146,7 @@ public class JdbcTimeEntryRepositoryTest {
 
     @Test
     public void deleteRemovesTheRecord() throws Exception {
+
         jdbcTemplate.execute(
             "INSERT INTO time_entries (id, project_id, user_id, date, hours) " +
                 "VALUES (999, 123, 321, '2017-01-09', 8)"
